@@ -1,0 +1,17 @@
+{
+  "name": "art-museum",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KostyaKarpin/art-museum.git",
+  "author": "Kostya Karpin <4epubelik@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.3"
+  }
+}
