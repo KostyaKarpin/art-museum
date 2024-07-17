@@ -1,17 +1,13 @@
 // eslint-disable-next-line import/namespace
 import { Route, Routes } from "react-router";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import FavoritesPage from "./pages/FavoritesPage";
+import { routes } from "./constants/routes";
 
 const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about/:id" element={<AboutPage />} />
-      <Route path="/favorites" element={<FavoritesPage />} />
-    </Routes>
-  );
+  const routeComponents = routes.map(({ path, component }, key) => {
+    return <Route key={key} path={path} element={component} />;
+  });
+
+  return <Routes>{routeComponents}</Routes>;
 };
 
 export default App;
