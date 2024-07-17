@@ -42,8 +42,24 @@ export default [
       react: {
         version: "detect",
       },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
+      },
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+          project: "./tsconfig.json",
+        },
+        // alias: {
+        //   map: [
+        //     ["@", "./src"],
+        //     ["@pages", "./src/pages"],
+        //     ["@constants", "./src/constants"],
+        //   ],
+        // },
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
+      },
     },
-
     rules: {
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": ["error"],

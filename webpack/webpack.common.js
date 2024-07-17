@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 // const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 // const Dotenv = require('dotenv-webpack');
-
 module.exports = {
   name: "client",
   entry: {
@@ -15,9 +14,9 @@ module.exports = {
     mainFields: ["source", "module", "main"],
     modules: [path.resolve("node_modules")],
     alias: {
-      "@": path.resolve(__dirname, "src"),
-      "@pages": path.resolve(__dirname, "src/pages"),
-      "@constants": path.resolve(__dirname, "src/constants"),
+      "@": path.resolve(__dirname, "..",  "./src"),
+      "@pages": path.resolve(__dirname, "..", "./src/pages"),
+      "@constants": path.resolve(__dirname, "..", "./src/constants"),
     },
   },
   module: {

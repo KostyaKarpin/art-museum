@@ -1,6 +1,6 @@
-import AboutPage from "../pages/AboutPage";
-import FavoritesPage from "../pages/FavoritesPage";
-import HomePage from "../pages/HomePage";
+import HomePage from "@pages/HomePage";
+import AboutPage from "@pages/AboutPage";
+import FavoritesPage from "@pages/FavoritesPage";
 
 export const routes = [
   {
