@@ -1,14 +1,9 @@
-import { useState } from "react"
-
 const App = () => {
+  return (
+    <div>
+      <h1>Entry point</h1>
+    </div>
+  );
+};
 
-    const [num, setNum] = useState(0);
-
-    return(
-        <div>
-            <h1>Entry point</h1>         
-        </div>
-    )
-}
-
-export default App
+export default App;
