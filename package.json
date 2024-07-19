@@ -18,6 +18,7 @@
     "react-dom": "^18.3.1",
     "react-router": "^6.25.0",
     "react-router-dom": "^6.25.0",
+    "react-use-localstorage": "^3.5.3",
     "yup": "^1.4.0"
   },
   "devDependencies": {
