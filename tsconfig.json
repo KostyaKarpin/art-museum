@@ -24,7 +24,8 @@
       "@/*": ["src/*"],
       "@pages/*": ["src/pages/*"],
       "@constants/*": ["src/constants/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@types/*": ["src/types/*"]
     },
     "typeRoots": [
       "/global.d.ts",
