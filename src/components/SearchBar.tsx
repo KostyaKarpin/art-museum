@@ -1,5 +1,6 @@
 import useSearch from "@/hooks/useSearch";
 import { useState } from "react";
+import SearchBarResults from "./SearchBarResults";
 
 const url = "https://api.artic.edu/api/v1/artworks";
 
@@ -10,7 +11,6 @@ const SearchBar = () => {
   const handleChange = (value: string) => {
     setInput(value);
   };
-  console.log(result);
 
   return (
     <div>
@@ -20,18 +20,7 @@ const SearchBar = () => {
         value={input}
         onChange={(event) => handleChange(event.target.value)}
       />
-      <div>
-        <h4>Search result</h4>
-        {result &&
-          result.map((element) => {
-            return (
-              <div key={element["id"]}>
-                <h6>{element["title"]}</h6>
-                <h6>{element["artist_title"]}</h6>
-              </div>
-            );
-          })}
-      </div>
+      {input && <SearchBarResults results={result} />}
     </div>
   );
 };
