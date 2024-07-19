@@ -1,25 +1,16 @@
-// eslint-disable-next-line import/namespace, import/no-named-as-default, import/default, import/no-named-as-default-member
-import axios from "axios";
-import { useState, useEffect } from "react";
+import useSearch from "@/hooks/useSearch";
+import { useState } from "react";
+
+const url = "https://api.artic.edu/api/v1/artworks";
 
 const SearchBar = () => {
   const [input, setInput] = useState("");
-  const [result, setResult] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`https://api.artic.edu/api/v1/artworks/search?q=${input}`, {
-        params: { fields: ["artist_title", "title", "date_display"] },
-      })
-      .then((res) => res.data.data)
-      .then((data) => {
-        setResult(data);
-      });
-  }, [input]);
+  const [result] = useSearch(url, input);
 
   const handleChange = (value: string) => {
     setInput(value);
   };
+  console.log(result);
 
   return (
     <div>
@@ -32,13 +23,11 @@ const SearchBar = () => {
       <div>
         <h4>Search result</h4>
         {result &&
-          result.map((item, index) => {
+          result.map((element) => {
             return (
-              <div key={index}>
-                <h6 onClick={() => console.log(item)} aria-hidden={true}>
-                  {item["title"]}
-                </h6>
-                <h6>----------------------</h6>
+              <div key={element["id"]}>
+                <h6>{element["title"]}</h6>
+                <h6>{element["artist_title"]}</h6>
               </div>
             );
           })}
