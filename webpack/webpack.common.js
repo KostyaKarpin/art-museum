@@ -14,9 +14,10 @@ module.exports = {
     mainFields: ["source", "module", "main"],
     modules: [path.resolve("node_modules")],
     alias: {
-      "@": path.resolve(__dirname, "..",  "./src"),
+      "@": path.resolve(__dirname, "..", "./src"),
       "@pages": path.resolve(__dirname, "..", "./src/pages"),
       "@constants": path.resolve(__dirname, "..", "./src/constants"),
+      "@hooks": path.resolve(__dirname, "..", "./src/hooks"),
     },
   },
   module: {
