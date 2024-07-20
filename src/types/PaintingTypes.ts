@@ -1,4 +1,4 @@
-export interface SmallCardsTypes {
+export interface Painting {
   id: number;
   image_id: number;
   title: string;
