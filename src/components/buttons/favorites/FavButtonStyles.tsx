@@ -10,7 +10,7 @@ export const Wrapper = styled.div<{
   justify-content: center;
   align-items: center;
   background: ${(prop) => (prop.$isFavorite ? BACKGROUND_ORANGE : LIGHT_GRAY)};
-  padding: 2%;
+  padding: 5%;
   border: none;
   border-radius: 100%;
 `;

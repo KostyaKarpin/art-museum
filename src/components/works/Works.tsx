@@ -1,6 +1,7 @@
 import useFetch from "@/hooks/useFetch";
-import PaintingCard from "../cards/paintingCard/PaintingCard";
+import PaintingCard from "../cards/painting/PaintingCard";
 import { GridWrapper, Section } from "./WorksStyles";
+import SectionTitle from "../headers/section/SectionTitle";
 
 const url = "https://api.artic.edu/api/v1";
 
@@ -9,7 +10,10 @@ const Works = () => {
   console.log(paintings);
   return (
     <Section>
-      <h1>Works Grid</h1>
+      <SectionTitle
+        firstLine={"Here some more"}
+        secondLine={"Other works for you"}
+      />
       {paintings && (
         <GridWrapper>
           {paintings.map((element, index) => {

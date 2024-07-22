@@ -1,12 +1,12 @@
 import SearchBar from "@/components/SearchBar";
-import WorksGrid from "@/components/works/WorksGrid";
+import Works from "@/components/works/Works";
 
 const HomePage = () => {
   return (
     <div>
       <h1>HomePage</h1>
       <SearchBar />
-      <WorksGrid />
+      <Works />
     </div>
   );
 };

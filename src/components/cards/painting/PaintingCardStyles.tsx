@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   border: 1px solid ${BORDER_GRAY};
+  padding: 4% 3%;
 `;
 
 export const DataWrapper = styled.div`
@@ -21,6 +22,7 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-left: 5%;
 `;
 
 interface TextProps {

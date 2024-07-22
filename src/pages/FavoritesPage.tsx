@@ -1,4 +1,4 @@
-import PaintingCard from "@/components/cards/paintingCard/PaintingCard";
+import PaintingCard from "@/components/cards/painting/PaintingCard";
 import { Painting } from "@/types/PaintingTypes";
 import { useRef } from "react";
 // eslint-disable-next-line import/namespace, import/default, import/no-named-as-default, import/no-named-as-default-member
