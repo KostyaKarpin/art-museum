@@ -1,11 +1,11 @@
-import SearchBar from "@/components/SearchBar";
+import Search from "@/components/search/searchSection/Search";
 import Works from "@/components/works/Works";
 
 const HomePage = () => {
   return (
     <div>
       <h1>HomePage</h1>
-      <SearchBar />
+      <Search />
       <Works />
     </div>
   );

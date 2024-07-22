@@ -1,8 +1,9 @@
 import useSearch from "@/hooks/useSearch";
 import { useState } from "react";
-import SearchBarResults from "./SearchBarResults";
+import SearchBarResults from "../searchResults/SearchBarResults";
 // eslint-disable-next-line import/namespace
-import { Field, Form, Formik } from "formik";
+import { Formik } from "formik";
+import { SearchField, SearchForm, Wrapper } from "./SearchBarStyles";
 
 const url = "https://api.artic.edu/api/v1/artworks";
 
@@ -19,24 +20,23 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
-      <h3>SearchBar</h3>
+    <Wrapper>
       <Formik initialValues={{ search: "" }} onSubmit={handleSubmit}>
-        <Form>
-          <Field
+        <SearchForm>
+          <SearchField
             type="text"
             name="search"
             id="search"
             value={input}
-            placeholder="Search..."
+            placeholder="Search Art, Artist, Work..."
             onChange={(event: { target: { value: string } }) =>
               handleChange(event.target.value)
             }
           />
           {input && <SearchBarResults results={result} />}
-        </Form>
+        </SearchForm>
       </Formik>
-    </div>
+    </Wrapper>
   );
 };
 
