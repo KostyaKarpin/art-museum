@@ -14,7 +14,7 @@ const PaintingInfo = () => {
   const imageURL = useGetImageURL(data?.image_id);
   return (
     <Wrapper>
-      <ImageWrapper width={"500px"} height={"500px"}>
+      <ImageWrapper width={"50%"} height={"100%"}>
         <Image src={imageURL} />
       </ImageWrapper>
       <InfoWrapper>

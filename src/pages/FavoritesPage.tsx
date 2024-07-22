@@ -9,13 +9,12 @@ const FavoritesPage = () => {
   const storagedArray = useRef(JSON.parse(storageItem));
   console.log(storagedArray.current);
   return (
-    <div>
-      <h1>FavoritesPage</h1>
+    <>
       {storagedArray &&
         storagedArray.current.map((painting: Painting, index: number) => {
           return <PaintingCard key={index} painting={painting} />;
         })}
-    </div>
+    </>
   );
 };
 
