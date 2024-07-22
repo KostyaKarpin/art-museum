@@ -4,9 +4,9 @@ import {
   DataWrapper,
   TextWrapper,
   Wrapper,
-  Text,
   PaintingLink,
 } from "./PaintingCardStyles";
+import { Text } from "@/globalStyles/TextStyles";
 import { LIGHT_ORANGE } from "@/constants/colors";
 import { textCut } from "@/utils/textCut";
 import { Image, ImageWrapper } from "@/globalStyles/ImageStlyes";

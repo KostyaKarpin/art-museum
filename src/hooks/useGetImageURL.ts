@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-const useGetImageURL = (imageID: number | null) => {
+const useGetImageURL = (imageID: number | null | undefined) => {
   // const [imageURL, setImageURL] = useState("");
   if (imageID) {
     // setImageURL(

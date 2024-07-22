@@ -1,4 +1,4 @@
-import { BLACK, BORDER_GRAY } from "@/constants/colors";
+import { BORDER_GRAY } from "@/constants/colors";
 // eslint-disable-next-line import/namespace
 import { Link } from "react-router-dom";
 // eslint-disable-next-line import/namespace, import/default, import/no-named-as-default, import/no-named-as-default-member
@@ -41,17 +41,4 @@ export const TextWrapper = styled.div`
   @media (max-width: 868px) {
     align-items: flex-end;
   }
-`;
-
-interface TextProps {
-  color?: string;
-  $weight?: number;
-  size?: string;
-  $margin?: string;
-}
-export const Text = styled.p<TextProps>`
-  color: ${(prop) => prop.color || BLACK};
-  font-size: ${(prop) => prop.size || "15px"};
-  font-weight: ${(prop) => prop.$weight || 500};
-  margin: ${(prop) => prop.$margin || 0};
 `;
