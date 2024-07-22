@@ -2,6 +2,7 @@
 import { Route, Routes } from "react-router";
 import { routes } from "@constants/routes";
 import { Global } from "./globalStyles/Global";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
   const routeComponents = routes.map(({ path, component }, key) => {
@@ -11,7 +12,11 @@ const App = () => {
   return (
     <>
       <Global />
-      <Routes>{routeComponents}</Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {routeComponents}
+        </Route>
+      </Routes>
     </>
   );
 };
