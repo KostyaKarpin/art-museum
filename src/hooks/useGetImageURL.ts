@@ -1,13 +1,14 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-const useGetImageURL = (imageID: string | null) => {
-  const [imageURL, setImageURL] = useState("");
+const useGetImageURL = (imageID: number | null) => {
+  // const [imageURL, setImageURL] = useState("");
   if (imageID) {
-    setImageURL(
-      `https://www.artic.edu/iiif/2/${imageID}/full/843,/0/default.jpg`
-    );
+    // setImageURL(
+    //   `https://www.artic.edu/iiif/2/${imageID}/full/843,/0/default.jpg`
+    // );
+    return `https://www.artic.edu/iiif/2/${imageID}/full/843,/0/default.jpg`;
   }
-  return imageURL;
+  return "";
 };
 
 export default useGetImageURL;
