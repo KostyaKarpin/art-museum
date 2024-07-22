@@ -34,7 +34,7 @@ const FavButton = (props: Props) => {
   };
 
   return (
-    <Wrapper onClick={handleToggleFavorite} isFavorite={Boolean(isFavorite)}>
+    <Wrapper onClick={handleToggleFavorite} $isFavorite={Boolean(isFavorite)}>
       <Icon src={bookmark} />
     </Wrapper>
   );

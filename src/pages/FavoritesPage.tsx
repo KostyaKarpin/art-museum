@@ -1,4 +1,4 @@
-import SmallCard from "@/components/SmallCard";
+import PaintingCard from "@/components/cards/paintingCard/PaintingCard";
 import { Painting } from "@/types/PaintingTypes";
 import { useRef } from "react";
 // eslint-disable-next-line import/namespace, import/default, import/no-named-as-default, import/no-named-as-default-member
@@ -13,7 +13,7 @@ const FavoritesPage = () => {
       <h1>FavoritesPage</h1>
       {storagedArray &&
         storagedArray.current.map((painting: Painting, index: number) => {
-          return <SmallCard key={index} painting={painting} />;
+          return <PaintingCard key={index} painting={painting} />;
         })}
     </div>
   );

@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Global />
-      <Routes>{routeComponents}</Routes>;
+      <Routes>{routeComponents}</Routes>
     </>
   );
 };

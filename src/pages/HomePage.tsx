@@ -1,5 +1,5 @@
 import SearchBar from "@/components/SearchBar";
-import WorksGrid from "@/components/WorksGrid";
+import WorksGrid from "@/components/works/WorksGrid";
 
 const HomePage = () => {
   return (
