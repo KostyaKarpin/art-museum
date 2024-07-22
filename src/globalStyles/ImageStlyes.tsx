@@ -6,8 +6,8 @@ export const ImageWrapper = styled.div<{ width?: string; height?: string }>`
   height: ${(prop) => prop.height || "auto"};
 `;
 
-export const Image = styled.img<{ src: string }>`
-  width: 100%;
+export const Image = styled.img<{ src: string; width?: string }>`
+  width: ${(prop) => prop.width || "100%"};
   height: 100%;
   content: ${(prop) => `url(${prop.src})`};
   object-fit: cover;
