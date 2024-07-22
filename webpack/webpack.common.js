@@ -19,6 +19,7 @@ module.exports = {
       "@constants": path.resolve(__dirname, "..", "./src/constants"),
       "@hooks": path.resolve(__dirname, "..", "./src/hooks"),
       "@types": path.resolve(__dirname, "..", "./src/types"),
+      "@images": path.resolve(__dirname, "..", "../src/assets/images"),
     },
   },
   module: {
