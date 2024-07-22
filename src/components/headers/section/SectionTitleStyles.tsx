@@ -13,4 +13,8 @@ export const Text = styled.h2<{ $firstLine: boolean }>`
   font-size: ${(prop) => (prop.$firstLine ? "16px" : "32px")};
   font-weight: 400;
   color: ${(prop) => (prop.$firstLine ? LIGHT_ORANGE : BLACK)};
+
+  @media (max-width: 470px) {
+    font-size: ${(prop) => (prop.$firstLine ? "12px" : "18px")};
+  }
 `;

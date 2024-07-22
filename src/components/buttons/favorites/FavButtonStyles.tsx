@@ -13,6 +13,12 @@ export const Wrapper = styled.div<{
   padding: 5%;
   border: none;
   border-radius: 100%;
+
+  @media (max-width: 868px) {
+    margin-top: 5%;
+    border-radius: 2%;
+    width: 100%;
+  }
 `;
 
 export const Icon = styled.img<{ src: string }>`

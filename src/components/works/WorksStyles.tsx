@@ -7,6 +7,10 @@ export const Section = styled.section`
   align-items: center;
   justify-content: center;
   padding: 0 10%;
+
+  @media (max-width: 470px) {
+    padding: 0 5%;
+  }
 `;
 
 export const GridWrapper = styled.div`
@@ -16,4 +20,13 @@ export const GridWrapper = styled.div`
   gap: 10px;
   width: 100%;
   margin-top: 3%;
+
+  @media (max-width: 868px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
 `;

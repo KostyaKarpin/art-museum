@@ -1,8 +1,12 @@
 import { Painting } from "@/types/PaintingTypes";
 import FavButton from "@/components/buttons/favorites/FavButton";
-// eslint-disable-next-line import/namespace
-import { Link } from "react-router-dom";
-import { DataWrapper, TextWrapper, Wrapper, Text } from "./PaintingCardStyles";
+import {
+  DataWrapper,
+  TextWrapper,
+  Wrapper,
+  Text,
+  PaintingLink,
+} from "./PaintingCardStyles";
 import { LIGHT_ORANGE } from "@/constants/colors";
 import { textCut } from "@/utils/textCut";
 import { Image, ImageWrapper } from "@/globalStyles/ImageStlyes";
@@ -16,7 +20,7 @@ const PaintingCard = (props: Props) => {
   const imageURL = useGetImageURL(props.painting.image_id);
   return (
     <Wrapper>
-      <Link to={`/about/:${props.painting.id}`}>
+      <PaintingLink to={`/about/:${props.painting.id}`}>
         <DataWrapper>
           <ImageWrapper width={"90px"} height={"90px"}>
             <Image src={imageURL} />
@@ -31,7 +35,7 @@ const PaintingCard = (props: Props) => {
             </Text>
           </TextWrapper>
         </DataWrapper>
-      </Link>
+      </PaintingLink>
       <FavButton painting={props.painting} />
     </Wrapper>
   );
