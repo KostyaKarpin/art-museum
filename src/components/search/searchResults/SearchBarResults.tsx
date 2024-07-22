@@ -5,8 +5,6 @@ type Props = {
   results: SearchResult[];
 };
 const SearchBarResults = (props: Props) => {
-  console.log(props.results);
-
   return (
     <Wrapper>
       {props.results &&

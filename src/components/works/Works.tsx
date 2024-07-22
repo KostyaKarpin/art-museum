@@ -7,7 +7,6 @@ const url = "https://api.artic.edu/api/v1";
 
 const Works = () => {
   const [paintings] = useFetch(url, 1, 9);
-  console.log(paintings);
   return (
     <Section>
       <SectionTitle

@@ -5,10 +5,11 @@ type Props = {
   result: SearchResult;
 };
 const SearchBarResult = (props: Props) => {
+  const { id, title, artist_title } = props.result;
   return (
-    <Wrapper>
-      <Text $isAuthor={false}>{props.result.title}</Text>
-      <Text $isAuthor={true}>{props.result.artist_title}</Text>
+    <Wrapper to={`/about/:${id}`}>
+      <Text $isAuthor={false}>{title}</Text>
+      <Text $isAuthor={true}>{artist_title}</Text>
     </Wrapper>
   );
 };

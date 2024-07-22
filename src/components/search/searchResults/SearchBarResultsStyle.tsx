@@ -11,4 +11,9 @@ export const Wrapper = styled.div`
   background-color: ${GRAY};
   border-radius: 0 0 10px 10px;
   padding: 2% 1%;
+
+  @media (max-width: 868px) {
+    width: 60%;
+    padding: 3% 2%;
+  }
 `;

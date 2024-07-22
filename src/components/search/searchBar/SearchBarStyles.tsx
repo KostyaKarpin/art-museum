@@ -27,4 +27,12 @@ export const SearchField = styled(Field)`
   &:focus {
     outline: none;
   }
+
+  @media (max-width: 868px) {
+    width: 70%;
+    padding: 3% 2%;
+  }
+  @media (max-width: 470px) {
+    width: 80%;
+  }
 `;
