@@ -4,12 +4,14 @@ import SearchBarResults from "../searchResults/SearchBarResults";
 // eslint-disable-next-line import/namespace
 import { Formik } from "formik";
 import { SearchField, SearchForm, Wrapper } from "./SearchBarStyles";
+import { useDebounce } from "@/hooks/useDebounce";
 
 const url = "https://api.artic.edu/api/v1/artworks";
 
 const SearchBar = () => {
   const [input, setInput] = useState("");
-  const [result] = useSearch(url, input);
+  const debouncedValue = useDebounce(input, 500);
+  const [result] = useSearch(url, debouncedValue);
 
   const handleChange = (value: string) => {
     setInput(value);

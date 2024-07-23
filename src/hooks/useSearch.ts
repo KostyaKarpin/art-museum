@@ -9,7 +9,7 @@ const useSearch = (url: string, input: string) => {
   useEffect(() => {
     axios
       .get(`${url}/search?q=${input}`, {
-        params: { fields: searchFields, limit: 3 },
+        params: { fields: searchFields },
       })
       .then((res) => res.data.data)
       .then((data) => {
