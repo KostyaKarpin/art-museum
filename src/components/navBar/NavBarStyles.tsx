@@ -6,7 +6,7 @@ import { TEXT_ORANGE, WHITE } from "@/constants/colors";
 
 export const Navigation = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 30%;
 
@@ -16,10 +16,14 @@ export const Navigation = styled.nav`
 `;
 
 export const NavList = styled.ul`
-  display: flex !important;
+  display: flex;
   justify-content: space-between;
   width: 100%;
   list-style-type: none;
+
+  @media (max-width: 868px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -39,5 +43,13 @@ export const NavLink = styled(Link)`
   &:focus {
     color: ${TEXT_ORANGE};
     transition: 0.5s ease-in;
+  }
+`;
+
+export const BurgerMenu = styled.img<{ src: string }>`
+  content: ${(prop) => `url(${prop.src})`};
+  display: none;
+  @media (max-width: 868px) {
+    display: block;
   }
 `;
