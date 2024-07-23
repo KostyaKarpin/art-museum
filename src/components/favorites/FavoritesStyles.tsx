@@ -6,7 +6,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 10%;
+  padding: 5% 10%;
 `;
 
 export const GridWrapper = styled.div`
