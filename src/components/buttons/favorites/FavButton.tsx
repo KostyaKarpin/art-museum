@@ -15,6 +15,7 @@ const FavButton = (props: Props) => {
     JSON.stringify([])
   );
   const storageArray = useRef(JSON.parse(storageItem));
+
   const isFavorite = storageArray.current.find(
     (obj: Painting) => obj.id === props.painting.id
   );
@@ -23,11 +24,11 @@ const FavButton = (props: Props) => {
     if (!isFavorite) {
       storageArray.current.push(props.painting);
       setStorageItem(JSON.stringify(storageArray.current));
+      console.log(JSON.parse(storageItem));
     } else {
       const indexFavoriteID = storageArray.current.findIndex(
         (obj: Painting) => obj.id === props.painting.id
       );
-      console.log("indexFav: " + indexFavoriteID);
       storageArray.current.splice(indexFavoriteID, 1);
       setStorageItem(JSON.stringify(storageArray.current));
     }

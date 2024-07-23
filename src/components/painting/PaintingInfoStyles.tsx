@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: flex-start;
   /* align-items: center; */
-  padding: 0 10%;
+  padding: 5% 10%;
   height: 100%;
 
   @media (max-width: 868px) {

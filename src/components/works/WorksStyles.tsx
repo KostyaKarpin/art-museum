@@ -6,7 +6,7 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 10%;
+  padding: 0 10% 5% 10%;
 
   @media (max-width: 470px) {
     padding: 0 5%;

@@ -7,5 +7,5 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
 
-  padding: 5% 10%;
+  padding: 0 10%;
 `;
