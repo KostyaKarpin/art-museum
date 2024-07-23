@@ -2,5 +2,8 @@
 import * as Yup from "yup";
 
 export const validationSchema = Yup.object().shape({
-  search: Yup.string().matches(/^[a-z]+$/, "Only alphbetic characters allowed"),
+  search: Yup.string().matches(
+    /^[a-z]+$/,
+    "Only alphabetic characters allowed"
+  ),
 });

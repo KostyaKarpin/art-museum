@@ -3,7 +3,12 @@ import axios from "axios";
 import { paintingFields } from "@/constants/fields";
 import { useEffect, useState } from "react";
 
-const useFetch = (url: string, page: number, limit: number) => {
+const useFetch = (
+  url: string,
+  page: number,
+  limit: number,
+  isLoading: (loading: boolean) => void
+) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
@@ -13,6 +18,7 @@ const useFetch = (url: string, page: number, limit: number) => {
       .then((res) => res.data.data)
       .then((data) => {
         setData(data);
+        isLoading(false);
       })
       .catch((err) => console.log(err));
   }, [url, page, limit]);

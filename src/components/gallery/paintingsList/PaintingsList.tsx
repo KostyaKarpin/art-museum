@@ -8,8 +8,10 @@ import {
 } from "./PaintingsListStyles";
 import Pagination from "../pagination/Pagination";
 import GalleryCard from "@/components/cards/galleryCard/GalleryCard";
+import Loading from "@/components/loading/Loading";
 
 const PaintingsList = () => {
+  const [loading, isLoading] = useState(true);
   const paintingsPerPage = 3;
   const totalPages = 21;
 
@@ -17,7 +19,8 @@ const PaintingsList = () => {
   const [data] = useFetch(
     "https://api.artic.edu/api/v1",
     page,
-    paintingsPerPage
+    paintingsPerPage,
+    isLoading
   );
 
   const handleNextPageClick = useCallback(() => {
@@ -33,28 +36,34 @@ const PaintingsList = () => {
   }, [page]);
 
   return (
-    <Wrapper>
-      <PaintingsWrapper>
-        {data &&
-          data.map((painting, index) => {
-            return <GalleryCard key={index} painting={painting} />;
-          })}
-      </PaintingsWrapper>
-      <PaginationWrapper>
-        <Pagination
-          onNextPageClick={handleNextPageClick}
-          onPrevPageClick={handlePrevPageClick}
-          disable={{
-            left: page === 1,
-            right: page === getPagesAmount(totalPages, paintingsPerPage),
-          }}
-          nav={{
-            current: page,
-            total: getPagesAmount(totalPages, paintingsPerPage),
-          }}
-        />
-      </PaginationWrapper>
-    </Wrapper>
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <Wrapper>
+          <PaintingsWrapper>
+            {data &&
+              data.map((painting, index) => {
+                return <GalleryCard key={index} painting={painting} />;
+              })}
+          </PaintingsWrapper>
+          <PaginationWrapper>
+            <Pagination
+              onNextPageClick={handleNextPageClick}
+              onPrevPageClick={handlePrevPageClick}
+              disable={{
+                left: page === 1,
+                right: page === getPagesAmount(totalPages, paintingsPerPage),
+              }}
+              nav={{
+                current: page,
+                total: getPagesAmount(totalPages, paintingsPerPage),
+              }}
+            />
+          </PaginationWrapper>
+        </Wrapper>
+      )}
+    </>
   );
 };
 

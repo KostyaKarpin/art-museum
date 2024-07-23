@@ -4,7 +4,7 @@ import { Painting } from "@/types/PaintingTypes";
 import { useEffect, useState } from "react";
 import { paintingFields } from "@/constants/fields";
 
-const useFetchByID = (id: string) => {
+const useFetchByID = (id: string, isLoading: (loading: boolean) => void) => {
   const url = "https://api.artic.edu/api/v1/artworks";
   const paintingID = Number(id.slice(1));
   const [data, setData] = useState<Painting>();
@@ -16,6 +16,7 @@ const useFetchByID = (id: string) => {
       .then((res) => res.data.data)
       .then((data: Painting) => {
         setData(data);
+        isLoading(false);
       })
       .catch((err) => console.log(err));
   }, [id]);
