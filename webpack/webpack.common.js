@@ -7,7 +7,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 module.exports = {
   name: "client",
   entry: {
-    "react-app-setup": path.resolve(__dirname, "..", "./src/index.tsx"),
+    "react-app-setup": path.resolve(__dirname, "../src/index.tsx"),
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
@@ -19,7 +19,7 @@ module.exports = {
       "@constants": path.resolve(__dirname, "..", "./src/constants"),
       "@hooks": path.resolve(__dirname, "..", "./src/hooks"),
       "@types": path.resolve(__dirname, "..", "./src/types"),
-      "@images": path.resolve(__dirname, "..", "../src/assets/images"),
+      "@images": path.resolve(__dirname, "../src/assets/images"),
     },
   },
   module: {

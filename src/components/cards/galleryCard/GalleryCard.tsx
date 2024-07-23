@@ -26,7 +26,7 @@ const GalleryCard = (props: Props) => {
       </ImageWrapper>
       <DataWrapper>
         <InfoWrapper>
-          <Text $weight={500} size={"18px"}>
+          <Text $weight={500} $size={"18px"}>
             {textCut(title, 11)}
           </Text>
           <Text color={TEXT_ORANGE}>{artist_title}</Text>

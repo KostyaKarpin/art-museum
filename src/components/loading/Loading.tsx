@@ -1,6 +1,7 @@
 import { Image, ImageWrapper } from "@/globalStyles/ImageStlyes";
 import { Wrapper } from "./LoadingStyles";
-import MuseumLogo from "@/assets/images/museum-logo2.svg";
+import MuseumLogo from "@images/museum-logo2.svg";
+import { memo } from "react";
 
 const Loading = () => {
   return (
@@ -12,4 +13,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default memo(Loading);

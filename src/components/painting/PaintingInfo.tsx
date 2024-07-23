@@ -27,12 +27,12 @@ const PaintingInfo = () => {
           </ImageWrapper>
           <InfoWrapper>
             <Info>
-              <Text size={"32px"} $weight={400}>
+              <Text $size={"32px"} $weight={400}>
                 {data && data.title}
               </Text>
               <Text
                 color={TEXT_ORANGE}
-                size={"20px"}
+                $size={"20px"}
                 $weight={400}
                 $margin={"5% 0 0 0"}
               >
@@ -43,7 +43,7 @@ const PaintingInfo = () => {
               </Text>
             </Info>
             <Info>
-              <Text size={"32px"} $margin={"0 0 5% 0"}>
+              <Text $size={"32px"} $margin={"0 0 5% 0"}>
                 Overview
               </Text>
               <Text $weight={400}>

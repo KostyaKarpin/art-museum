@@ -1,14 +1,11 @@
 import useFetch from "@/hooks/useFetch";
 import { getPagesAmount } from "@/utils/getPagesAmount";
 import { useCallback, useState } from "react";
-import {
-  PaginationWrapper,
-  PaintingsWrapper,
-  Wrapper,
-} from "./PaintingsListStyles";
+import { PaginationWrapper, PaintingsWrapper } from "./PaintingsListStyles";
 import Pagination from "../pagination/Pagination";
 import GalleryCard from "@/components/cards/galleryCard/GalleryCard";
 import Loading from "@/components/loading/Loading";
+import { ComponentWrapper } from "@/globalStyles/WrapperStyles";
 
 const PaintingsList = () => {
   const [loading, isLoading] = useState(true);
@@ -29,6 +26,7 @@ const PaintingsList = () => {
     const total = data ? getPagesAmount(totalPages, paintingsPerPage) : current;
     setPage(next <= total ? next : current);
   }, [page, data]);
+
   const handlePrevPageClick = useCallback(() => {
     const current = page;
     const prev = current - 1;
@@ -40,7 +38,7 @@ const PaintingsList = () => {
       {loading ? (
         <Loading />
       ) : (
-        <Wrapper>
+        <ComponentWrapper $direction={"column"}>
           <PaintingsWrapper>
             {data &&
               data.map((painting, index) => {
@@ -61,7 +59,7 @@ const PaintingsList = () => {
               }}
             />
           </PaginationWrapper>
-        </Wrapper>
+        </ComponentWrapper>
       )}
     </>
   );

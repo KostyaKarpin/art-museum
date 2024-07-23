@@ -1,6 +1,7 @@
 import { Image, ImageWrapper } from "@/globalStyles/ImageStlyes";
 import { Wrapper } from "./HeaderStyles";
-import Logo from "@/assets/images/museum-logo.svg";
+
+import Logo from "@images/museum-logo.svg";
 import NavBar from "../navBar/NavBar";
 
 const Header = () => {

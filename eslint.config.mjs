@@ -50,13 +50,14 @@ export default [
           alwaysTryTypes: true,
           project: "./tsconfig.json",
         },
-        // alias: {
-        //   map: [
-        //     ["@", "./src"],
-        //     ["@pages", "./src/pages"],
-        //     ["@constants", "./src/constants"],
-        //   ],
-        // },
+        alias: {
+          map: [
+            ["@", "./src"],
+            ["@pages", "./src/pages"],
+            ["@constants", "./src/constants"],
+            ["@images", "./src/assets/images"],
+          ],
+        },
         extensions: [".ts", ".tsx", ".js", ".jsx"],
       },
     },

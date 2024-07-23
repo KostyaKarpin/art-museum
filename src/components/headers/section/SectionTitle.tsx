@@ -1,4 +1,6 @@
-import { Wrapper, Text } from "./SectionTitleStyles";
+import { memo } from "react";
+import { Text } from "./SectionTitleStyles";
+import { ComponentWrapper } from "@/globalStyles/WrapperStyles";
 
 interface Props {
   firstLine: string;
@@ -8,11 +10,11 @@ interface Props {
 const SectionTitle = (props: Props) => {
   const { firstLine, secondLine } = props;
   return (
-    <Wrapper>
+    <ComponentWrapper $direction={"column"} $justify={"space-between"}>
       <Text $firstLine={true}>{firstLine}</Text>
       <Text $firstLine={false}>{secondLine}</Text>
-    </Wrapper>
+    </ComponentWrapper>
   );
 };
 
-export default SectionTitle;
+export default memo(SectionTitle);

@@ -26,7 +26,7 @@ const PaintingCard = (props: Props) => {
             <Image src={imageURL} />
           </ImageWrapper>
           <TextWrapper>
-            <Text size={"17px"}>{textCut(props.painting.title, 11)}</Text>
+            <Text $size={"17px"}>{textCut(props.painting.title, 11)}</Text>
             <Text color={LIGHT_ORANGE} $margin={"5% 0 0 0"}>
               {textCut(props.painting.artist_title, 11)}
             </Text>

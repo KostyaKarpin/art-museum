@@ -1,4 +1,3 @@
-import { BLACK } from "@/constants/colors";
 // eslint-disable-next-line import/namespace
 import { createGlobalStyle } from "styled-components";
 import Regular from "@/assets/fonts/LexendDeca-Regular.ttf";
@@ -11,7 +10,7 @@ export const Global = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         text-decoration: none;
-        color: ${BLACK};
+        color: ${(props) => props.theme.colors.black};
 
         @font-face {
             font-family: 'LexendDeca-Regular';
